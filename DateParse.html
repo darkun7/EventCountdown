@@ -1,0 +1,12 @@
+<input type="date" id="enddate" oninput="parseFunction()">
+<p id="now"></p>
+<p id="demo"></p>
+
+<script>
+function parseFunction() {
+  var now = Date.parse(new Date())/1000;
+  document.getElementById("now").innerHTML = "Now: "+now;
+  var later = Date.parse(document.getElementById("enddate").value)/1000;
+  document.getElementById("demo").innerHTML = "Date: "+later;
+}
+</script>
